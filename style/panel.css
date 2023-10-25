@@ -1,0 +1,199 @@
+body{
+    font-family: "b nazanin";
+    font-size: 18px;
+    direction: rtl;
+    background-color: #f1f1f1f1;
+}
+div,p,ul{
+    padding: 0px;
+    margin: 0px;
+    
+}
+p{
+    color: #ecf0f1;
+}
+a{
+    text-decoration: none;
+    color: #ecf0f1;
+}
+li{
+    list-style: none;
+    float: right;
+}
+.menu{
+    float: right;
+    width: 100%;
+    height: auto;
+    background: #434242;
+}
+.menu ul li a{
+    float: right;
+    padding: 10px 15px;
+
+}
+.menu ul li a:hover{
+    color: #f95858;
+}
+.menu ul li:hover ul{
+    display: block;
+
+}
+.menu li ul li a{
+    padding: 5px;
+
+}
+.menu li ul{
+    position: absolute;
+    display: none;
+    margin: 40px 0;
+    background: #434242;
+}
+.menu li ul li{
+    float: none;
+    margin: 0;
+}
+.wellcome {
+    float: right;
+    width: 98%;
+    height: 50px;
+    background-color: #fff;
+    margin: 10px 1%;
+
+}
+.wellcome p{
+    float: right;
+    margin: 10px;
+    color: #000;
+    font-size: 23px;
+
+}
+.lastpostbox{
+    float: right;
+    width: 98%;
+    height: auto;
+    background-color: #fff;
+    margin: 10px 1%;
+}
+.lastposttitle{
+    float: right;
+    width: 96%;
+    height: 50px;
+    margin: 20px 2%;
+}
+.lastposttitle p{
+    width: 30%;
+    padding: 12px 5px;
+    background-color: #574D4D;
+    float: right;
+}
+.lastpostbox ul li{
+    float: none;
+
+}
+.lastpostbox ul li a{
+    float: right;
+    color: #414040;
+    width: 98%;
+    background-color: #f0f0f0;
+    margin: 5px 1%;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+.lastpostbox ul li a:hover{
+    background-color: #c75224;
+    color: #fff;
+}
+/* ! sendpost */
+.sendpostbox{
+    float: right;
+    width: 98%;
+    height: auto;
+    background: #fff;
+    margin: 10px 1%;
+}
+.sendposttitle{
+    float: right;
+    width: 98%;
+    height: auto;
+    background-color: #fff;
+    margin: 10px 1%;
+}
+.sendposttitle p{
+    width: 30%;
+    padding: 12px 5px;
+    background-color: #574D4D;
+    float: right;
+}
+
+.sendpostbox label{
+    float: right;
+    margin: 10px 2%;
+
+    
+}
+.sendpostbox input[type=text],[type=file] {
+    float: right;
+    width: 96%;
+    height: 30px;
+    margin: 5px 2%;
+    border: 1px solid #dcdcdc;
+}
+.sendpostbox input[type=submit]{
+    background-color: #414040;
+    color: white;
+}
+.sendpostbox input[type=submit]:hover{
+
+    background-color: #000;
+   
+    color: white;
+}
+.sendpostbox textarea{
+    float: right;
+    width: 96%;
+    height: 250px;
+    margin: 5px 2%;
+    border: 1px solid #dcdcdc;
+}
+.sendpostbox input[type=submit]{
+    float: right;
+    margin: 5px 2%;
+    padding: 10px 20px;
+    font-family: "b nazanin";
+    cursor: pointer;
+}
+/* ! managepost */
+.managepostbox{
+    float: right;
+    width: 98%;
+    height: auto;
+    background-color: #fff;
+    margin: 10px 1%;
+}
+.managepostbox a{
+    float: right;
+    width: 50%;
+    color: #414040;
+    
+    margin: 5px 1%;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+.managepostbox input[type=submit]{
+    background-color: #414040;
+    border: none;
+    color: white;
+}
+.managepostbox input[type=submit]:hover{
+
+    background-color: #000;
+   
+    color: white;
+}
+.edit-icon i {
+    color: blue;
+}
+.delete-icon i {
+    color: red;
+}
+/* !  */
