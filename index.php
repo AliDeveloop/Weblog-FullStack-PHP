@@ -3,7 +3,7 @@
 <?php include("spcial-page.php")?>
 <?php include("admin/func.php")?>
 <?php 
-$query = "SELECT * FROM `post` ORDER BY `id` DESC";
+$query = "SELECT * FROM `post` ORDER BY `id` DESC limit 4";
 $result = mysqli_query($link, $query);
 while($row = mysqli_fetch_array($result)){
 

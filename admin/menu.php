@@ -15,6 +15,7 @@
     }
     ?>
 <body>
+    <?php include("config.php")?>
 <div class="menu">
         <ul>
             <li>

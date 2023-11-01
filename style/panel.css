@@ -161,6 +161,13 @@ li{
     padding: 10px 20px;
     font-family: "b nazanin";
     cursor: pointer;
+
+}
+.sendpostbox img{
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin:  10px 5px;
 }
 /* ! managepost */
 .managepostbox{

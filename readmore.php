@@ -11,7 +11,7 @@ while($row = mysqli_fetch_array($result)){
     </div>
     <!-- rm-big-content-thumb -->
     <div class="rm-big-content-txt">
-    <a href="#"<?php echo $row['title'];?> </a>
+    <a href="#"><?php echo $row['title'];?> </a>
     <p><?php echo $row['content'];?> </p>
 <!-- rm-big-content-txt -->
 </div>

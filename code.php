@@ -125,6 +125,20 @@ if(isset($_POST['btnsendpost'])){
         
 }
 
+// ! delete post
+if(isset($_GET['postid'])){
+    $postid=$_GET['postid'];
+    $query="DELETE FROM `post` WHERE `id` = '$postid';";
+    $result=mysqli_query($link,$query);
+    if($result){
+        header('Location:admin/managepost.php?delok=5000');
+        exit();
+    }
+    else{
+        header('Location:admin/managepost.php?delerror=6000');
+        exit();
+    }
+}
 
 ?>
 
