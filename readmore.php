@@ -1,13 +1,20 @@
 <?php include("header.php")?>
+<?php 
+$postid=$_GET['postid'];
+$query = "SELECT * FROM `post` where `id` =$postid ;";
+$result = mysqli_query($link, $query);
+while($row = mysqli_fetch_array($result)){ 
+?>
 <div class="rm-big-content">
     <div class="rm-big-content-thumb">
-        <img src="images/post2.jpg">
+        <img src=<?php echo $row['image'];?>>
     </div>
     <!-- rm-big-content-thumb -->
     <div class="rm-big-content-txt">
-    <a href="#">لورم اپسیوم</a>
-    <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. </p>
+    <a href="#"<?php echo $row['title'];?> </a>
+    <p><?php echo $row['content'];?> </p>
 <!-- rm-big-content-txt -->
 </div>
+<?php }?>
 <!-- rm-big-content -->
 <?php include("footer.php")?>

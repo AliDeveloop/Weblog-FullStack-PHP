@@ -14,6 +14,7 @@
     <title>وبلاگ دانش کامپیوتر</title>
 </head>
 <body>
+<?php include("admin/config.php")?>
     <div class="allweb">
         <div class="menu">
             <ul>

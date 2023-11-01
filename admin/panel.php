@@ -1,6 +1,5 @@
-
     <?php include("menu.php") ?>
-    <div class="wellcome">
+        <div class="wellcome">
         <p>مدیر عزیز به پنل مدیریت سایت خوش امدید</p>
     </div>
     <!-- wellcome -->

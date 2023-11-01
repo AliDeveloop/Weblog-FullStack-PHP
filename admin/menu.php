@@ -8,6 +8,12 @@
 
 
 </head>
+<?php
+    if(!isset($_COOKIE["admin"])){
+        header("location:../index.php");
+        exit();
+    }
+    ?>
 <body>
 <div class="menu">
         <ul>
@@ -30,6 +36,10 @@
             <li>
                 <a href="../index.php"> خانه   </a>
             </li>
+            <li>
+                <a href=<?php echo '../code.php?exit=200'; ?>> خروج </a>
+            </li>
+
         </ul>
     </div>
     <!-- menu -->
