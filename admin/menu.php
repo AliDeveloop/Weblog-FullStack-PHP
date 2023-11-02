@@ -22,7 +22,11 @@
                 <a href="panel.php">پنل مدیریت</a>
             </li>
             <li>
-                <a href="managespcialpost.php"> مدیریت پست های ویژه</a>
+               <a href="#"> مدیریت پست های ویژه </a>
+                <ul>
+                    <li><a href="managespcialpost.php"> پست ویژه جدید</a></li>
+                    <li><a href="amanagespcialpost.php">مدیریت پست های ویژه </a></li>
+                </ul>
             </li>
             <li>
                 <a href="#">مدیریت پست </a>

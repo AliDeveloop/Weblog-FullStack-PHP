@@ -459,7 +459,78 @@ if(isset($_POST['btnadd'])){
         }
     }
 }
+// ! amanagespcialpost
+// ! delete spcialpost
+if(isset($_GET['sppostid'])){
+    $sppostid=$_GET['sppostid'];
+    $query="DELETE FROM `spcialpost` WHERE `id` = '$sppostid';";
+    $result=mysqli_query($link,$query);
+    if($result){
+        header('Location:admin/amanagespcialpost.php?delok=5000');
+        exit();
+    }
+    else{
+        header('Location:admin/amanagespcialpost.php?delerror=6000');
+        exit();
+    }
+}
+// ! UPDATE post
+if(isset($_POST['btnsupdatepost'])){
+    if(empty($_POST['title'])||empty($_POST['content'])){
+        header('Location:admin/amanagespcialpost.php?empty=1000');
+        exit();
+    }
+    else{
+        $postid=$_POST['postid'];
+        $title=$_POST['title'];
+        $content=$_POST['content'];
+        $image;
+        $filetemp=$_FILES['file1']['tmp_name'];
+         if(empty($filetemp)){
+            $query="UPDATE `spcialpost` SET `title`='".$title."',`content`='".$content."' WHERE `spcialpost`.`id` = $postid;";
 
+        }
+        
+        else{
+            $file1=$_FILES['file1']['name'];
+            $fileext=pathinfo($file1,PATHINFO_EXTENSION);
+            $filesize=$_FILES['file1']['size'];
+            $filetype=$_FILES['file1']['type'];
+            $filetemp=$_FILES['file1']['tmp_name'];
+            if(($filetype=='image/png')||($filetype=='image/jpg')||($filetype=='image/bmp')||($filetype=='image/jpeg')){
+                $filesize=floor($filesize/1024);
+                echo $filesize."KB <br>";
+                if($filesize>2048){
+                    header('Location:admin/amanagespcialpost.php?size=22000');
+                    exit();
+                }
+                else{
+                    $uniq=time().uniqid(rand());   
+                    $path="picture/".$uniq.".".$fileext;
+                    if(move_uploaded_file($filetemp,$path)){
+                        $image=$path;
+                    }
+                    else{
+                        header('Location:admin/amanagespcialpost.php?errorinupload=3000');
+                        exit();
+                    }
+                }  
+            }
+            else{
+                header('Location:admin/amanagespcialpost.php?errorintype=2000');
+                exit();
+            }
+
+            $query="UPDATE `spcialpost` SET `title`='".$title."',`content`='".$content."',`image`='".$image."' WHERE `spcialpost`.`id`=$postid ;";
+
+        }     
+        $result=mysqli_query($link,$query);
+        if($result){
+            header('Location:admin/amanagespcialpost.php?ok=50000');
+            exit();
+        }
+    }
+}
 
 
 
