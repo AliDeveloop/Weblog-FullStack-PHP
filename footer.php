@@ -1,30 +1,32 @@
 <div class="ads">
-            <ul>
+<ul>
+                <?php 
+                $query = "SELECT * FROM `bottomads` ORDER BY `id` DESC limit 4";
+                $result = mysqli_query($link, $query);
+                while($row = mysqli_fetch_array($result)){
+                ?> 
                 <li>
-                    <a href="#"> <img src="images/tab1.gif"></a>
+                    <a href=<?php echo $row['link']; ?>> <img src=<?php echo $row['image'];?>></a>
                 </li>
-                
-                <li>
-                    <a href="#"> <img src="images/tab2.gif"></a>
-                </li>
-                <li>
-                    <a href="#"> <img src="images/tab3.gif"></a>
-                </li>
-                
-                <li>
-                    <a href="#"> <img src="images/tab4.gif"></a>
-                </li>
+                <?php
+                }
+                ?>
             </ul>
         </div>
         <!--  ads  -->
         <div class="footer">
             <div class="menu">
                 <ul>
-                    <li><a href="index.html">خانه</a></li>
-                    <li><a href="#">تنظیمات</a></li>
-                    <li><a href="#">درباره ما</a></li>
-                    <li><a href="#">تماس باما</a></li>
-                </ul>
+            <?php 
+                $query = "SELECT * FROM `menu`";
+                $result = mysqli_query($link, $query);
+                while($row = mysqli_fetch_array($result)){
+                ?> 
+                <li><a href=<?php echo $row['link']; ?>><?php echo $row['title'];?></a></li>
+                <?php
+                }
+                ?>
+            </ul>
             </div>
             <!-- menu -->
             <div class="socialmedia">

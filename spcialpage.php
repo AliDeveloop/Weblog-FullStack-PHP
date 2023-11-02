@@ -1,6 +1,8 @@
+<?php include("header.php") ?>
+
 <div class="content-wrapper">
     <?php 
-        $query = "SELECT * FROM `spcialpost` order by `id` DESC LIMIT 3";
+        $query = "SELECT * FROM `spcialpost` order by `id` DESC";
         $result = mysqli_query($link, $query);
         while($row = mysqli_fetch_array($result))
         {
@@ -28,3 +30,5 @@
             <?php }?>
         </div>
         <!-- content wrapper -->
+
+<?php include("footer.php")?>  

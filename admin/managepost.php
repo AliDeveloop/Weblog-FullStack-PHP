@@ -12,6 +12,26 @@
             echo"<center><font color=red> حذف با مشکل رو به رو شد</font></center>";
         }
         ?>
+        <?php
+        if(isset($_GET["empty"])){
+            echo"<center><font color=red>مقادیر فیلد ها باید پر شود </font></center>";
+        }
+        if(isset($_GET["size"])){
+            echo"<center><font color=red> حجم فایل انتخابی باید کمتر از 2 مگا بایت باشد </font></center>";
+        }
+        if(isset($_GET["errorinupload"])){
+            echo"<center><font color=red> خطا در ارسال فایل رخ داده . لطفا مجدد تلاش کنید</font></center>";
+        }
+        if(isset($_GET["errorintype"])){
+            echo"<center><font color=red> نوع فایل باید تصویر باشد</font></center>";
+        }
+        if(isset($_GET["ok"])){
+            echo"<center><font color=green> پست با موفقیت ویرایش شد</font></center>";
+        }
+        if(isset($_GET["noinsert"])){
+            echo"<center><font color=red> خطایی در ویرایش پست رخ داده است</font></center>";
+        }
+        ?>
     <!-- sendposttitle -->
     <table border="1px">
         <tr>

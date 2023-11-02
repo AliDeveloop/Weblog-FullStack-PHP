@@ -35,6 +35,9 @@
                 <a href="setting.php"> تنظیمات   </a>
             </li>
             <li>
+                <a href="addadmin.php"> اضافه کردن مدیر جدید   </a>
+            </li>
+            <li>
                 <a href="../index.php"> خانه   </a>
             </li>
             <li>
